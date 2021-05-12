@@ -1,8 +1,8 @@
-**Установка пакетов**  
+**install packages**  
 npm install
 
-**Запуск режима разработчика**  
+**developer mode**  
 gulp
 
-**Сформировать папку build**  
+**make a build**  
 gulp build
