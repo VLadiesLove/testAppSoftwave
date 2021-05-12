@@ -1,0 +1,206 @@
+@import "b4-grid/grid";
+@import "global/fonts";
+@import "global/variables";
+@import "global/items";
+@import "global/reset";
+@import "global/typography";
+@import "global/ui";
+
+::-webkit-scrollbar {
+    width: 14px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #d8d8d9;
+    border-radius: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #ababac;
+    border-radius: 8px;
+  }
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 31px 0px 53px;
+    background-color: #1f1f1f;
+
+    &__items{
+        display: flex;
+        color: #ffffff;
+        font-family: "Poalim Beta 5";
+        font-size: 18px;
+        letter-spacing: 0.4px;
+        margin-bottom: 18px;
+
+        .wide-img{
+            width: 22px;
+            height: 22px;
+            margin-right: 22px;
+            margin-top: 25px;
+        }
+
+        .dots{
+            width: 5px; 
+            margin-right: 22px;
+            height: 22px;
+            margin-top: 25px;
+        }
+    }
+
+    .bell{
+        position: relative;
+    }
+
+    .counter{
+        position: absolute;
+        left: 10px;
+        top:10px;
+        border-radius: 20px;
+        width: 22px;
+        height: 22px;
+        background-color: #f70337;
+        padding-left: 7px;
+        font-size: 17px;
+    }
+
+    &__menu{
+        margin-right: 16px;
+        margin-top: 19px;
+    }
+
+    &__rectangle{
+        margin-top: 19px;
+        height: 22px;
+        width: 21px;
+        background-image: linear-gradient(to right, #e02a19 0%, #dc1223 45%, #c01039 100%);
+        transform: rotate(45deg);
+    }
+}
+
+.search{
+    background-color: #2f2f2f;
+    display: flex;
+    justify-content: flex-end;
+    color: #ffffff;
+    font-size: 15px;
+    font-family: "Poalim Beta 5";
+    padding-top: 13px ;
+    padding-bottom: 16px;
+
+    img{
+        max-width: 18px;
+        height: 18px;
+        margin-right: 88px;
+        margin-left: 2px;
+    }
+    &__string{
+        text-align: right;
+        width: 407px;
+        color: #ffffff;
+        font-size: 15px;
+        border-bottom: 2px solid #f76059;
+    }
+
+    &__string::placeholder{
+        color: #ffffff;
+        font-size: 15px;
+    }
+
+    &__text{
+        padding-right: 58px;
+        display: flex;
+        img{
+            width: 14px;
+        }
+    }
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f8f8f8;
+    padding-top: 100px;
+    padding-left: 160px;
+    padding-right: 84px;
+    
+    .card{
+        font-family: "Poalim Beta 5";
+        width: 329px;
+        padding-top: 35px;
+        margin-right: 90px;
+        margin-bottom:76px;
+        background-color: #ffffff;
+        border-radius: 14px;
+        color: #303033;
+        display: flex;
+        flex-direction: column;
+        
+        &:hover{
+            transform: scale(1.5);
+            transition: ease 1s;
+        }
+        &__header{
+            display: flex;
+            padding-left: 114px;
+            margin-bottom: 19px;
+            padding-right: 42px;
+        }
+
+        &__text{
+            margin-right:14px;
+        }
+
+        &__big-text{
+            color: #535353;
+            font-size: 24px;
+            
+        }
+
+        &__small-text{
+            font-size: 15px;
+            font-weight: 300;
+            text-align: right;
+            opacity: 0.83;
+            img{
+                display: inline;
+                width: 11px;
+                padding-top: 5px;
+            }
+        }
+
+        &__image{
+            width: 76px;
+        }
+
+        &__button{
+            cursor: pointer;
+            width: 229px;
+            color: #656565;
+            font-size: 13px;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.16);
+            border-radius: 7px;
+            margin: 0px 42px 34px auto;
+            &-text{
+                margin: 10px 83px 10px 89px;
+            }
+
+        }
+        
+        &__bottom{
+            display: flex;
+            justify-content: center;
+            margin: 0px 57px 43px 67px;
+            .cross{
+                margin-top: 7px;
+                width: 34px;
+                height: 34px;
+            }
+            img{
+                width: 48px;
+            }
+        }     
+       
+    }
+}
