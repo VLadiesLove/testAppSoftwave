@@ -6,13 +6,19 @@
 @import "global/typography";
 @import "global/ui";
 
+body{
+    overflow: hidden;
+}
+
 ::-webkit-scrollbar {
     width: 14px;
+    
   }
 
   ::-webkit-scrollbar-track {
     background-color: #d8d8d9;
     border-radius: 8px;
+    
   }
 
   ::-webkit-scrollbar-thumb {
@@ -23,7 +29,7 @@
 .header{
     display: flex;
     justify-content: space-between;
-    padding: 0px 31px 0px 53px;
+    padding: 0px 45px 0px 42px;
     background-color: #1f1f1f;
 
     &__items{
@@ -37,13 +43,16 @@
         .wide-img{
             width: 22px;
             height: 22px;
-            margin-right: 22px;
+            margin-right: 17px;
             margin-top: 25px;
         }
 
         .dots{
-            width: 5px; 
-            margin-right: 22px;
+            text-align: left;
+            width: 27px; 
+            padding-right: 11px;
+            margin-right: 11px;
+            padding-left: 11px;
             height: 22px;
             margin-top: 25px;
         }
@@ -54,6 +63,7 @@
     }
 
     .counter{
+        color: #ffffff;
         position: absolute;
         left: 10px;
         top:10px;
@@ -62,18 +72,21 @@
         height: 22px;
         background-color: #f70337;
         padding-left: 7px;
+        padding-right: 4px;
         font-size: 17px;
     }
 
     &__menu{
+        font-size: 18px;
         margin-right: 16px;
-        margin-top: 19px;
+        margin-top: 15px;
     }
 
     &__rectangle{
-        margin-top: 19px;
-        height: 22px;
-        width: 21px;
+        margin-right: -10px;
+        margin-top: 20px;
+        height: 15px;
+        width: 15px;
         background-image: linear-gradient(to right, #e02a19 0%, #dc1223 45%, #c01039 100%);
         transform: rotate(45deg);
     }
@@ -87,7 +100,7 @@
     font-size: 15px;
     font-family: "Poalim Beta 5";
     padding-top: 13px ;
-    padding-bottom: 16px;
+    padding-right: 14px;
 
     img{
         max-width: 18px;
@@ -97,10 +110,16 @@
     }
     &__string{
         text-align: right;
-        width: 407px;
+        width: 409px;
         color: #ffffff;
         font-size: 15px;
         border-bottom: 2px solid #f76059;
+
+        &-wrapper{
+            display: flex;
+            padding-bottom: 14px;
+            margin-right: -4px;
+        }
     }
 
     &__string::placeholder{
@@ -109,60 +128,73 @@
     }
 
     &__text{
-        padding-right: 58px;
+        margin-top: 5px;
+        margin-right: 45px;
         display: flex;
+        align-items: center;
+        border-bottom: 2px solid #e2435d;
+        padding-bottom: 10px;
+        padding: 0px 5px 9px 8px;
+
         img{
             width: 14px;
+            height: 14px;
+            margin: 0px 5px 0px 8px;
+            margin-right: -5px;
         }
     }
+
 }
 
 .cards{
+    height: 100vh;
+    overflow-y: scroll;
     display: flex;
     flex-wrap: wrap;
     background-color: #f8f8f8;
-    padding-top: 100px;
-    padding-left: 160px;
-    padding-right: 84px;
+    justify-content: space-between;
+    padding: 100px 159px 84px 160px;
     
     .card{
         font-family: "Poalim Beta 5";
         width: 329px;
         padding-top: 35px;
-        margin-right: 90px;
         margin-bottom:76px;
         background-color: #ffffff;
         border-radius: 14px;
         color: #303033;
         display: flex;
         flex-direction: column;
+        transition: ease 1s;
         
         &:hover{
             transform: scale(1.5);
-            transition: ease 1s;
         }
         &__header{
             display: flex;
             padding-left: 114px;
-            margin-bottom: 19px;
+            margin-bottom: 16px;
             padding-right: 42px;
         }
 
         &__text{
+            margin-top: -4px;
             margin-right:14px;
         }
 
         &__big-text{
             color: #535353;
             font-size: 24px;
+            font-weight: 700;
             
         }
 
         &__small-text{
-            font-size: 15px;
+            font-size: 16px;
             font-weight: 300;
             text-align: right;
             opacity: 0.83;
+            margin-top: -2px;
             img{
                 display: inline;
                 width: 11px;
@@ -171,36 +203,82 @@
         }
 
         &__image{
+            border-radius: 18px;
             width: 76px;
         }
 
         &__button{
-            cursor: pointer;
+            cursor:pointer;
             width: 229px;
             color: #656565;
             font-size: 13px;
             box-shadow: 0 0 3px rgba(0, 0, 0, 0.16);
             border-radius: 7px;
-            margin: 0px 42px 34px auto;
-            &-text{
-                margin: 10px 83px 10px 89px;
-            }
+            margin: 4px 42px 34px auto;
+            padding: 10px 0px 10px 6px;
+            text-align: center;
 
         }
         
         &__bottom{
             display: flex;
-            justify-content: center;
             margin: 0px 57px 43px 67px;
             .cross{
-                margin-top: 7px;
+                margin-top: 0px;
+                margin-right: 10px;
                 width: 34px;
                 height: 34px;
             }
             img{
-                width: 48px;
+                width: 100%;
             }
+        }
+        &__images{
+            width: 48px;
+            border-radius: 18px;
+            margin-right: 6px;
+            margin-top: -2px;
         }     
        
+    }
+}
+
+
+@media screen and (max-width: 1000px ){
+    .cards{
+        padding: 10px;
+
+        .card{
+            margin: 10px auto;
+            &:hover{
+                transform: scale(1);
+            }
+        }
+    }
+}
+
+@media screen and (max-width:678px){
+    .search{
+        justify-content: space-around;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+}
+
+@media screen and (max-width:440px){
+    .search__string{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:440px){
+    .header{
+        width: 100vw;
+        padding: 0px 15px;
+
+        &__rectangle{
+            margin-right: 0px;
+        }
     }
 }

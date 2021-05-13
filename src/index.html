@@ -16,16 +16,19 @@
 
   <body>
     <main>
-      <div class="header">
+      <header class="header">
         <div class="header__items">
-         <div class="dots">
+         <button class="dots">
           <img src="./images/dots.png" alt="#">
-         </div> 
+         </button> 
+         <button>
           <img src="./images/man.png" class="wide-img" alt="#">
-          <div class="bell">
+         </button>
+          
+          <button class="bell">
             <img src="./images/bell.png" class="wide-img" alt="#">
           <div class="counter">2</div>
-          </div>
+          </button>
           
         </div>
         <div class="header__items">
@@ -35,47 +38,27 @@
           <div class="header__rectangle">
           </div>
         </div>
-      </div>
+      </header>
       <div class="search">
-        <input class="search__string" placeholder="חיפוש">
-      <img src="./images/search.png" alt="search">
-        <div class="search__text">
-          ניהול חונכים
-          <img src="./images/vectorimg.png" alt="img">
+        <div class="search__string-wrapper">
+          <input class="search__string" placeholder="חיפוש">
+        <div class="search__img">
+          <img src="./images/search.png" alt="search">
+        </div>
+        </div>
+        
+        <div class="serach__text-wrapper">
+          <div class="search__text">
+            ניהול חונכים
+            <div>
+              <img src="./images/calendar.png" alt="img">
+            </div>
+        </div>
+        
       </div>
       </div>
       <div class="cards">
-        <div class="card">
-          <div class="card__header">
-            <div class="card__text">
-              <div class="card__big-text">אלכס כהן
-      
-              </div>
-              <div class="card__small-text">
-                תפקיד
-                <img src="./images/button.png" alt="button">
-              </div>
-              <div class="card__small-text">
-                14.7.18
-                <img src="./images/button.png" alt="button">
-              </div>
-            </div>
-            <div class="card__image">
-              <img src="./images/card1.png" alt="photo">
-            </div>
-          </div>
-          <div class="card__button">
-            <div class="card__button-text">
-              יומן למידה
-            </div>
-          </div>
-          <div class="card__bottom">
-            <img src="./images/cross.png" class="cross" alt="cross">
-            <img src="./images/card2.png" alt="card">
-            <img src="./images/card3.png" alt="card">
-            <img src="./images/card4.png" alt="card">
-          </div>
-        </div>
+        @@include("./include/components/card.html")
         @@include("./include/components/card.html")
         @@include("./include/components/card.html")
         @@include("./include/components/card.html")

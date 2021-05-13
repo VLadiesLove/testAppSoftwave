@@ -3597,6 +3597,9 @@ button {
 html {
   font-size: 10px; }
 
+body {
+  overflow: hidden; }
+
 ::-webkit-scrollbar {
   width: 14px; }
 
@@ -3615,7 +3618,7 @@ html {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 0px 31px 0px 53px;
+  padding: 0px 45px 0px 42px;
   background-color: #1f1f1f; }
   .header__items {
     display: -webkit-box;
@@ -3629,16 +3632,20 @@ html {
     .header__items .wide-img {
       width: 22px;
       height: 22px;
-      margin-right: 22px;
+      margin-right: 17px;
       margin-top: 25px; }
     .header__items .dots {
-      width: 5px;
-      margin-right: 22px;
+      text-align: left;
+      width: 27px;
+      padding-right: 11px;
+      margin-right: 11px;
+      padding-left: 11px;
       height: 22px;
       margin-top: 25px; }
   .header .bell {
     position: relative; }
   .header .counter {
+    color: #ffffff;
     position: absolute;
     left: 10px;
     top: 10px;
@@ -3647,14 +3654,17 @@ html {
     height: 22px;
     background-color: #f70337;
     padding-left: 7px;
+    padding-right: 4px;
     font-size: 17px; }
   .header__menu {
+    font-size: 18px;
     margin-right: 16px;
-    margin-top: 19px; }
+    margin-top: 15px; }
   .header__rectangle {
-    margin-top: 19px;
-    height: 22px;
-    width: 21px;
+    margin-right: -10px;
+    margin-top: 20px;
+    height: 15px;
+    width: 15px;
     background-image: -webkit-gradient(linear, left top, right top, from(#e02a19), color-stop(45%, #dc1223), to(#c01039));
     background-image: linear-gradient(to right, #e02a19 0%, #dc1223 45%, #c01039 100%);
     -webkit-transform: rotate(45deg);
@@ -3672,7 +3682,7 @@ html {
   font-size: 15px;
   font-family: "Poalim Beta 5";
   padding-top: 13px;
-  padding-bottom: 16px; }
+  padding-right: 14px; }
   .search img {
     max-width: 18px;
     height: 18px;
@@ -3680,10 +3690,16 @@ html {
     margin-left: 2px; }
   .search__string {
     text-align: right;
-    width: 407px;
+    width: 409px;
     color: #ffffff;
     font-size: 15px;
     border-bottom: 2px solid #f76059; }
+    .search__string-wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      padding-bottom: 14px;
+      margin-right: -4px; }
   .search__string::-webkit-input-placeholder {
     color: #ffffff;
     font-size: 15px; }
@@ -3700,28 +3716,40 @@ html {
     color: #ffffff;
     font-size: 15px; }
   .search__text {
-    padding-right: 58px;
+    margin-top: 5px;
+    margin-right: 45px;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-bottom: 2px solid #e2435d;
+    padding-bottom: 10px;
+    padding: 0px 5px 9px 8px; }
     .search__text img {
-      width: 14px; }
+      width: 14px;
+      height: 14px;
+      margin: 0px 5px 0px 8px;
+      margin-right: -5px; }
 
 .cards {
+  height: 100vh;
+  overflow-y: scroll;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   background-color: #f8f8f8;
-  padding-top: 100px;
-  padding-left: 160px;
-  padding-right: 84px; }
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 100px 159px 84px 160px; }
   .cards .card {
     font-family: "Poalim Beta 5";
     width: 329px;
     padding-top: 35px;
-    margin-right: 90px;
     margin-bottom: 76px;
     background-color: #ffffff;
     border-radius: 14px;
@@ -3732,34 +3760,38 @@ html {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
-    flex-direction: column; }
+    flex-direction: column;
+    -webkit-transition: ease 1s;
+    transition: ease 1s; }
     .cards .card:hover {
       -webkit-transform: scale(1.5);
-      transform: scale(1.5);
-      -webkit-transition: ease 1s;
-      transition: ease 1s; }
+      transform: scale(1.5); }
     .cards .card__header {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       padding-left: 114px;
-      margin-bottom: 19px;
+      margin-bottom: 16px;
       padding-right: 42px; }
     .cards .card__text {
+      margin-top: -4px;
       margin-right: 14px; }
     .cards .card__big-text {
       color: #535353;
-      font-size: 24px; }
+      font-size: 24px;
+      font-weight: 700; }
     .cards .card__small-text {
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 300;
       text-align: right;
-      opacity: 0.83; }
+      opacity: 0.83;
+      margin-top: -2px; }
       .cards .card__small-text img {
         display: inline;
         width: 11px;
         padding-top: 5px; }
     .cards .card__image {
+      border-radius: 18px;
       width: 76px; }
     .cards .card__button {
       cursor: pointer;
@@ -3769,20 +3801,54 @@ html {
       -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.16);
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.16);
       border-radius: 7px;
-      margin: 0px 42px 34px auto; }
-      .cards .card__button-text {
-        margin: 10px 83px 10px 89px; }
+      margin: 4px 42px 34px auto;
+      padding: 10px 0px 10px 6px;
+      text-align: center; }
     .cards .card__bottom {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
       margin: 0px 57px 43px 67px; }
       .cards .card__bottom .cross {
-        margin-top: 7px;
+        margin-top: 0px;
+        margin-right: 10px;
         width: 34px;
         height: 34px; }
       .cards .card__bottom img {
-        width: 48px; }
+        width: 100%; }
+    .cards .card__images {
+      width: 48px;
+      border-radius: 18px;
+      margin-right: 6px;
+      margin-top: -2px; }
+
+@media screen and (max-width: 1000px) {
+  .cards {
+    padding: 10px; }
+    .cards .card {
+      margin: 10px auto; }
+      .cards .card:hover {
+        -webkit-transform: scale(1);
+        transform: scale(1); } }
+
+@media screen and (max-width: 678px) {
+  .search {
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; } }
+
+@media screen and (max-width: 440px) {
+  .search__string {
+    width: 100%; } }
+
+@media screen and (max-width: 440px) {
+  .header {
+    width: 100vw;
+    padding: 0px 15px; }
+    .header__rectangle {
+      margin-right: 0px; } }
